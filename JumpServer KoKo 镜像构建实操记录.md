@@ -796,7 +796,3 @@ moby/buildkit:buildx-stable-1
 ```text
 KoKo Dockerfile 在运行阶段需要执行 apt-get update 和 apt-get install，但当前内网服务器无法访问 deb.debian.org，且暂未配置 Debian trixie 内网 apt 源。
 ```
-
-后续如果要继续完成构建，需要优先解决 Debian trixie apt 源问题，或者提前制作包含运行依赖的 Debian 基础镜像。
-
-本次实操的重点不只是构建 KoKo 镜像，而是理解 Dockerfile 多阶段构建、Buildx 构建机制、amd64 架构构建流程，以及内网环境下镜像构建失败的排查思路。
